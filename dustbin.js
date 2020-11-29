@@ -1,0 +1,18 @@
+class Dustbin {
+    constructor (){
+
+
+
+
+    }
+
+    display(){
+
+
+        
+    }
+
+
+
+
+}
