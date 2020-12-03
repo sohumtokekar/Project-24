@@ -17,7 +17,7 @@ function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
 	
-	paper = new Paper(200,625);
+	paper = new Paper(200,625,20);
 
 	//ellipse(56, 46, 55, 55);
 
@@ -53,15 +53,13 @@ function draw() {
   paper.display();
   drawSprites();
  keypressed();
+ console.log(paper.body.position.x);
 }
 
 function keypressed(){
-	/*const bodies = Matter.Composite.allBodies(engine.world);
-	  for (let i = 0; i < bodies.length; i += 1) {
-		const body = bodies[i];*/
 		if (keyCode === UP_ARROW){
-			Matter.Body.applyForce(body, body.position, {x:100,y:100});
-		}
+			var paperpos = paper.body.position;
+			Matter.Body.applyForce(paper.body,paper.paperpos, {x: 20, y: 20})
 	  }	
 
-
+	}
